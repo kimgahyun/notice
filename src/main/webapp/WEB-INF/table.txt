@@ -1,0 +1,20 @@
+CREATE TABLE TBL_NOTICE (
+
+  NTCNO int(11) NOT NULL AUTO_INCREMENT,      -- 글 번호
+  TITLE varchar(255),                         -- 제목
+  WRITER varchar(20),                         -- 작성자
+  MEMO   varchar(4000),                       -- 내용
+  NTCDATE     datetime,                       -- 작성일자
+  PRIMARY KEY (NTCNO)
+
+) ;
+
+
+CREATE TABLE TBL_NOTICEFILE (
+    FILENO INT(11)  NOT NULL AUTO_INCREMENT,   -- 파일 번호
+    NTCNO INT(11),                             -- 글번호
+    FILENAME VARCHAR(100),                     -- 파일명
+    REALNAME VARCHAR(30),                      -- 실제파일명
+    FILESIZE INT,                              -- 파일 크기
+    PRIMARY KEY (FILENO)
+);
